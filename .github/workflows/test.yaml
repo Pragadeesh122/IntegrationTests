@@ -21,12 +21,14 @@ jobs:
 
       - name: Run docker-compose
         uses: hoverkraft-tech/compose-action@v2.0.1
+        with:
+          compose-file: ./IntegrationTests/docker-compose.yml
 
       - name: Ensure Docker Compose is available
         run: docker-compose version
 
       - name: Copy .env.example to .env
-        run: cp ./1-integration-test/.env.example ./1-integration-test/.env
+        run: cp ./IntegrationTests/.env.example ./IntegrationTests/.env
 
       - name: Run integration script
-        run: cd 1-integration-test && npm run test:integration
+        run: cd IntegrationTests && npm run test:integration
