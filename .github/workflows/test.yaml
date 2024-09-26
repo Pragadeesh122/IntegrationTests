@@ -35,4 +35,4 @@ jobs:
         run: cp ./IntegrationTests/.env.example ./IntegrationTests/.env
 
       - name: Run integration script
-        run: cd IntegrationTests && npm run test:integration
+        run: cd IntegrationTests && yarn run test:integration
