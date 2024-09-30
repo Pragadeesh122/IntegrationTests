@@ -20,7 +20,7 @@ app.post("/sum", async (req, res) => {
 
   if (parsedObject.data.a > 1000 || parsedObject.data.b > 1000) {
     return res.status(420).json({
-      message: "Input too large",
+      message: "The inputs are too large",
     });
   }
 
