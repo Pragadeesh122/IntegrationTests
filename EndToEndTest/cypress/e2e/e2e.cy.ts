@@ -10,10 +10,10 @@ describe("Testing app", () => {
     // Fill in the password field
     cy.get("#password").type("Testing12!");
 
-    cy.get("button").eq(0).click();
+    cy.get("button").eq(0).click({timeout: 10000});
 
     cy.contains("Discover the Latest Fashion Trends").should("exist", {
-      timeout: 25000,
+      timeout: 10000,
     });
     cy.contains("Trending Now").should("exist");
     cy.contains("Trending Now").click();
