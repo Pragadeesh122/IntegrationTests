@@ -38,6 +38,14 @@ jobs:
         working-directory: ./IntegrationTests
         run: yarn install
 
+      - name: Install dependencies
+        working-directory: ./EndToEndTest
+        run: yarn install
+
       - name: Run integration script
         working-directory: ./IntegrationTests
         run: yarn run test:integration
+
+      - name: Run end-to-end script
+        working-directory: ./EndToEndTest
+        run: yarn run test
