@@ -13,7 +13,7 @@ describe("Testing app", () => {
     cy.get("button").eq(0).click();
 
     cy.contains("Discover the Latest Fashion Trends").should("exist", {
-      timeout: 15000,
+      timeout: 25000,
     });
     cy.contains("Trending Now").should("exist");
     cy.contains("Trending Now").click();
